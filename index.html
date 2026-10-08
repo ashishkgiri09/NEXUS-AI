@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nexus — Autonomous AI Software Engineering Platform</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Mermaid.js CDN for rendering live diagrams -->
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: 'dark',
+      themeVariables: {
+        darkMode: true,
+        background: '#0f172a',
+        primaryColor: '#3b82f6',
+        primaryTextColor: '#f8fafc',
+        primaryBorderColor: '#60a5fa',
+        lineColor: '#94a3b8',
+        secondaryColor: '#1e293b',
+        tertiaryColor: '#0f172a'
+      }
+    });
+  </script>
+  <style>
+    body {
+      background-color: #0b0f19;
+      color: #e2e8f0;
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
+    .mermaid svg {
+      max-width: 100% !important;
+      height: auto !important;
+    }
+    .glow-card {
+      background: rgba(15, 23, 42, 0.75);
+      border: 1px solid rgba(59, 130, 246, 0.2);
+      backdrop-filter: blur(12px);
+    }
+  </style>
+</head>
+<body class="min-h-screen antialiased">
+  <!-- Top Navigation -->
+  <header class="border-b border-slate-800 bg-slate-900/80 backdrop-blur sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-blue-600 via-indigo-500 to-purple-500 flex items-center justify-center font-bold text-white shadow-lg shadow-blue-500/30">
+          N
+        </div>
+        <div>
+          <h1 class="text-lg font-bold tracking-tight text-white">Nexus</h1>
+          <p class="text-xs text-slate-400">Autonomous AI Software Engineering Platform</p>
+        </div>
+      </div>
+      <div class="flex items-center space-x-3 text-sm">
+        <span class="px-3 py-1 text-xs rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/20 font-medium">
+          Hackathon Architecture Spec
+        </span>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-7xl mx-auto px-6 py-10 space-y-12">
+    <!-- Hero / Intro -->
+    <section class="glow-card p-8 rounded-2xl relative overflow-hidden border border-blue-500/30">
+      <div class="absolute -top-24 -right-24 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl pointer-events-none"></div>
+      <div class="relative z-10 max-w-4xl space-y-4">
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+          Nexus — System Architecture
+        </h2>
+        <p class="text-lg text-slate-300 leading-relaxed">
+          <strong>Nexus</strong> is an autonomous, cloud-native software engineering platform that transforms high-level natural language feature requests into fully implemented, tested, and verified pull requests. Operating entirely inside isolated ephemeral cloud workspaces, Nexus coordinates a specialized multi-agent hierarchy—spanning PRD creation, architecture planning, multi-agent code generation, headless browser-driven visual/functional testing, and automated code review.
+        </p>
+        <div class="pt-2 flex flex-wrap gap-3 text-xs font-mono text-slate-400">
+          <span class="bg-slate-800/80 px-3 py-1.5 rounded-lg border border-slate-700">Client-Agnostic Cloud Execution</span>
+          <span class="bg-slate-800/80 px-3 py-1.5 rounded-lg border border-slate-700">Autonomous Self-Correction Loop</span>
+          <span class="bg-slate-800/80 px-3 py-1.5 rounded-lg border border-slate-700">Dual Human Approval Gates</span>
+          <span class="bg-slate-800/80 px-3 py-1.5 rounded-lg border border-slate-700">Multimodal Visual QA</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 1. System Overview & Workflow -->
+    <section class="space-y-6">
+      <div class="border-b border-slate-800 pb-3">
+        <h3 class="text-2xl font-bold text-white flex items-center gap-2">
+          <span class="text-blue-400">01.</span> Complete End-to-End Workflow
+        </h3>
+        <p class="text-slate-400 text-sm mt-1">Lifecycle progression from feature prompt to verified Pull Request.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div class="glow-card p-5 rounded-xl space-y-2">
+          <div class="text-xs font-mono text-blue-400 uppercase tracking-wider">Step 1 — Input</div>
+          <h4 class="font-bold text-white text-base">User Request & Repo Link</h4>
+          <p class="text-xs text-slate-400">Developer specifies a natural language prompt and authorizes Git repository access.</p>
+        </div>
+        <div class="glow-card p-5 rounded-xl space-y-2">
+          <div class="text-xs font-mono text-indigo-400 uppercase tracking-wider">Step 2 — Specs</div>
+          <h4 class="font-bold text-white text-base">PRD Agent & Gate 1</h4>
+          <p class="text-xs text-slate-400">Elicits user stories & acceptance tests. Developer reviews and approves the PRD in the dashboard.</p>
+        </div>
+        <div class="glow-card p-5 rounded-xl space-y-2">
+          <div class="text-xs font-mono text-purple-400 uppercase tracking-wider">Step 3 — Blueprint</div>
+          <h4 class="font-bold text-white text-base">Architect Agent & Gate 2</h4>
+          <p class="text-xs text-slate-400">Inspects codebase AST and plans target file diffs. Developer approves the technical architecture.</p>
+        </div>
+        <div class="glow-card p-5 rounded-xl space-y-2">
+          <div class="text-xs font-mono text-emerald-400 uppercase tracking-wider">Step 4 — Build & QA</div>
+          <h4 class="font-bold text-white text-base">Dev-Test Feedback Loop</h4>
+          <p class="text-xs text-slate-400">Developers code, Tester executes headless Playwright tests & visual QA, self-correcting any bugs.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. High-Level System Architecture Diagram -->
+    <section class="space-y-6">
+      <div class="border-b border-slate-800 pb-3">
+        <h3 class="text-2xl font-bold text-white flex items-center gap-2">
+          <span class="text-blue-400">02.</span> High-Level System Architecture Diagram
+        </h3>
+        <p class="text-slate-400 text-sm mt-1">Rendered with live Mermaid.js inside the ephemeral cloud isolation boundary.</p>
+      </div>
+
+      <div class="glow-card p-6 rounded-2xl overflow-x-auto">
+        <div class="mermaid">
+flowchart TB
+    subgraph ClientLayer["Client & Control Plane"]
+        User["Developer / User"]
+        WebUI["Nexus Dashboard (Next.js / WebSockets)"]
+        User -->|Natural Language Prompt & Repo Auth| WebUI
+        WebUI -->|Live Telemetry, Previews & Approvals| User
+    end
+
+    subgraph OrchestrationLayer["Nexus Orchestration & Agent Management"]
+        Gateway["API Gateway & Auth Service"]
+        JobQueue["Distributed Task Queue (Redis / Temporal)"]
+        Orchestrator["Core Agent Orchestrator & State Machine"]
+        DB[(State & Telemetry Store: PostgreSQL)]
+
+        WebUI <-->|REST / WSS| Gateway
+        Gateway --> JobQueue
+        JobQueue --> Orchestrator
+        Orchestrator <--> DB
+    end
+
+    subgraph AgentPool["Specialized Agent Ensemble"]
+        PRDAgent["PRD Agent\n(Requirements & Acceptance Criteria)"]
+        ArchAgent["Architect Agent\n(System Design & File Plan)"]
+        DevAgent["Developer Agent(s)\n(Code Synthesis & Refactoring)"]
+        TestAgent["Tester Agent\n(Browser Automation & Vision QA)"]
+        RevAgent["Reviewer Agent\n(Audit, Security & PR Synthesis)"]
+
+        Orchestrator --> PRDAgent
+        PRDAgent -->|PRD Spec| ArchAgent
+        ArchAgent -->|Execution Plan| DevAgent
+        DevAgent -->|Applied Changes| TestAgent
+        TestAgent -->|Failure Diagnostic Packet| DevAgent
+        TestAgent -->|Verification Proofs| RevAgent
+    end
+
+    subgraph HumanGates["Human-in-the-Loop Gates"]
+        Gate1{"PRD Approval?"}
+        Gate2{"Architecture Approval?"}
+
+        PRDAgent --> Gate1
+        Gate1 -- Approved --> ArchAgent
+        Gate1 -- Feedback --> PRDAgent
+        ArchAgent --> Gate2
+        Gate2 -- Approved --> DevAgent
+        Gate2 -- Feedback --> ArchAgent
+    end
+
+    subgraph ExecutionLayer["Ephemeral Cloud Workspace (Isolated Sandboxes)"]
+        Sandbox["MicroVM / Ephemeral Container (Firecracker / Docker)"]
+        GitFS["Sandboxed Repo Workspace & Volume"]
+        Runtime["App Runtime (Node.js / Python / Go / etc.)"]
+        BrowserEngine["Headless Browser (Playwright) & Screenshot Capture"]
+        VisionQA["Multimodal Vision Analyzer (UI Verification)"]
+
+        Sandbox --- GitFS
+        Sandbox --- Runtime
+        Sandbox --- BrowserEngine
+        BrowserEngine --> VisionQA
+    end
+
+    subgraph ExternalServices["External Integrations"]
+        VCS["Git Provider (GitHub / GitLab API)"]
+        LLM["Foundation Model APIs (Claude / Gemini / GPT)"]
+    end
+
+    DevAgent <-->|Execute Commands & Edit Files| Sandbox
+    TestAgent <-->|Run Test Suites & Trigger Browser| Sandbox
+    VisionQA -->|Visual Diffs & Validation| TestAgent
+    RevAgent -->|Push Branch & Create Pull Request| VCS
+    AgentPool <-->|Prompts & Multimodal Reasoning| LLM
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Specialized Agent Matrix -->
+    <section class="space-y-6">
+      <div class="border-b border-slate-800 pb-3">
+        <h3 class="text-2xl font-bold text-white flex items-center gap-2">
+          <span class="text-blue-400">03.</span> Agent Specifications & Roles
+        </h3>
+        <p class="text-slate-400 text-sm mt-1">Responsibilities, inputs, outputs, and verification standards for each agent.</p>
+      </div>
+
+      <div class="overflow-x-auto glow-card rounded-2xl">
+        <table class="w-full text-left text-sm text-slate-300">
+          <thead class="bg-slate-800/80 text-xs uppercase text-slate-400 font-mono">
+            <tr>
+              <th class="px-6 py-4">Agent</th>
+              <th class="px-6 py-4">Core Role</th>
+              <th class="px-6 py-4">Inputs</th>
+              <th class="px-6 py-4">Outputs</th>
+              <th class="px-6 py-4">Verification Gate</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-800 font-sans">
+            <tr class="hover:bg-slate-800/40">
+              <td class="px-6 py-4 font-bold text-blue-400 whitespace-nowrap">PRD Agent</td>
+              <td class="px-6 py-4">User stories, acceptance criteria, scope boundaries</td>
+              <td class="px-6 py-4 text-xs font-mono text-slate-400">User prompt, README, repo context</td>
+              <td class="px-6 py-4 text-xs font-mono text-slate-300">Structured PRD Markdown</td>
+              <td class="px-6 py-4 text-xs"><span class="px-2 py-0.5 rounded bg-blue-500/20 text-blue-300">Human Approval Gate 1</span></td>
+            </tr>
+            <tr class="hover:bg-slate-800/40">
+              <td class="px-6 py-4 font-bold text-indigo-400 whitespace-nowrap">Architect Agent</td>
+              <td class="px-6 py-4">Codebase AST analysis, file plan, API contracts</td>
+              <td class="px-6 py-4 text-xs font-mono text-slate-400">Approved PRD, file tree, configs</td>
+              <td class="px-6 py-4 text-xs font-mono text-slate-300">Technical Architecture Blueprint</td>
+              <td class="px-6 py-4 text-xs"><span class="px-2 py-0.5 rounded bg-indigo-500/20 text-indigo-300">Human Approval Gate 2</span></td>
+            </tr>
+            <tr class="hover:bg-slate-800/40">
+              <td class="px-6 py-4 font-bold text-purple-400 whitespace-nowrap">Developer Agent(s)</td>
+              <td class="px-6 py-4">Code generation, refactoring, unit tests</td>
+              <td class="px-6 py-4 text-xs font-mono text-slate-400">Arch plan, diagnostic error packets</td>
+              <td class="px-6 py-4 text-xs font-mono text-slate-300">Code patches, Git diffs</td>
+              <td class="px-6 py-4 text-xs"><span class="px-2 py-0.5 rounded bg-purple-500/20 text-purple-300">Syntax & Compilation</span></td>
+            </tr>
+            <tr class="hover:bg-slate-800/40">
+              <td class="px-6 py-4 font-bold text-amber-400 whitespace-nowrap">Tester Agent</td>
+              <td class="px-6 py-4">Runs app, executes tests, captures UI screenshots</td>
+              <td class="px-6 py-4 text-xs font-mono text-slate-400">Workspace build, acceptance tests</td>
+              <td class="px-6 py-4 text-xs font-mono text-slate-300">Logs, traces, visual proof</td>
+              <td class="px-6 py-4 text-xs"><span class="px-2 py-0.5 rounded bg-amber-500/20 text-amber-300">100% Pass & Vision QA</span></td>
+            </tr>
+            <tr class="hover:bg-slate-800/40">
+              <td class="px-6 py-4 font-bold text-emerald-400 whitespace-nowrap">Reviewer Agent</td>
+              <td class="px-6 py-4">Security audit, code quality, PR publishing</td>
+              <td class="px-6 py-4 text-xs font-mono text-slate-400">Git diff, PRD, test traces</td>
+              <td class="px-6 py-4 text-xs font-mono text-slate-300">Verified GitHub/GitLab PR</td>
+              <td class="px-6 py-4 text-xs"><span class="px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300">Ready for Merge</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 4. Self-Correction Loop Sequence Diagram -->
+    <section class="space-y-6">
+      <div class="border-b border-slate-800 pb-3">
+        <h3 class="text-2xl font-bold text-white flex items-center gap-2">
+          <span class="text-blue-400">04.</span> Autonomous Self-Correction Sequence
+        </h3>
+        <p class="text-slate-400 text-sm mt-1">Autonomous error recovery cycle between Developer and Tester agents.</p>
+      </div>
+
+      <div class="glow-card p-6 rounded-2xl overflow-x-auto">
+        <div class="mermaid">
+sequenceDiagram
+    autonumber
+    participant Dev as Developer Agent
+    participant Box as Cloud Workspace Sandbox
+    participant Test as Tester Agent
+    participant Vis as Vision & Browser Engine
+    participant Rev as Reviewer Agent
+
+    Dev->>Box: Apply code patch & update dependencies
+    Dev->>Test: Signal code readiness
+    Test->>Box: Execute test suite (Unit / Integration / E2E)
+    
+    alt Test Suite Fails
+        Box-->>Test: Test failure log & stack trace
+        Test->>Dev: Diagnostic packet (Error traceback + failing lines)
+        Dev->>Box: Apply corrective patch
+    else Test Suite Passes
+        Test->>Box: Spin up app server (e.g., localhost:3000)
+        Test->>Vis: Trigger Playwright automated user journey
+        Vis->>Box: Interact with DOM (Click, Type, Navigate)
+        Vis->>Vis: Capture viewport & component screenshots
+        Vis->>Test: Return screenshots & visual anomaly report
+        
+        alt Visual or UI Functional Bug Detected
+            Test->>Dev: Visual bug report (Screenshots + DOM diff + expected state)
+            Dev->>Box: Adjust CSS / UI components / layout logic
+        else Visual & Functional Verification Pass
+            Test->>Rev: Verification package (Logs, traces, screenshots)
+            Rev->>Rev: Audit code quality & security
+        end
+    end
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer / Open in VS Code Guide -->
+    <footer class="pt-8 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-400 gap-4">
+      <div>
+        Created for <strong class="text-slate-200">Nexus Hackathon Project</strong>
+      </div>
+      <div class="font-mono text-slate-500">
+        SYSTEM_ARCHITECTURE.md • Ready for VS Code & Markdown Preview
+      </div>
+    </footer>
+  </main>
+</body>
+</html>

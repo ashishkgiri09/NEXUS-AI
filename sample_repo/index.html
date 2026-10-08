@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apex Hardware — Cloud Infrastructure & Developer Gear</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { background-color: #0f172a; color: #f8fafc; font-family: ui-sans-serif, system-ui, sans-serif; }
+  </style>
+</head>
+<body class="min-h-screen">
+  <!-- Top Navigation -->
+  <header class="border-b border-slate-800 bg-slate-900/90 backdrop-blur sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <div class="w-8 h-8 rounded-lg bg-indigo-600 flex items-center justify-center font-bold text-white shadow">
+          A
+        </div>
+        <span class="text-lg font-bold tracking-tight text-white">Apex Hardware</span>
+      </div>
+      <div class="flex items-center space-x-4">
+        <!-- NAVBAR_ACTIONS -->
+        <button class="px-3.5 py-1.5 rounded-lg bg-indigo-600 hover:bg-indigo-500 text-white text-sm font-medium transition">
+          Cart (0)
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero & Search -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 py-8">
+    <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-slate-800 pb-6">
+      <div>
+        <h1 class="text-2xl sm:text-3xl font-extrabold text-white">Edge Compute & Developer Terminals</h1>
+        <p class="text-sm text-slate-400 mt-1">High-performance workstations configured for AI workloads.</p>
+      </div>
+      <div class="w-full md:w-72">
+        <input type="text" id="search-input" placeholder="Search devices..." class="w-full px-4 py-2 rounded-lg bg-slate-800 border border-slate-700 text-slate-200 placeholder-slate-500 focus:outline-none focus:border-indigo-500 text-sm">
+      </div>
+    </div>
+
+    <!-- Product Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
+      <!-- Product Card 1 -->
+      <div class="product-card bg-slate-800/60 border border-slate-700/80 rounded-xl p-5 flex flex-col justify-between hover:border-slate-600 transition" data-product-id="prod-1">
+        <div>
+          <div class="h-40 rounded-lg bg-slate-700/40 flex items-center justify-center text-slate-500 font-semibold mb-4 border border-slate-700/40">
+            GPU Cluster Rig 8000
+          </div>
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-xs font-semibold px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">In Stock</span>
+            <span class="text-sm font-bold text-indigo-400">$4,899</span>
+          </div>
+          <h2 class="text-base font-semibold text-white">Titan Alpha Workstation</h2>
+          <p class="text-xs text-slate-400 mt-1">Quad RTX 4090 with custom liquid loop and 256GB ECC RAM.</p>
+        </div>
+        <div class="mt-5 pt-4 border-t border-slate-700/60 flex items-center justify-between gap-3">
+          <button class="flex-1 py-2 rounded-lg bg-indigo-600/90 hover:bg-indigo-600 text-white text-xs font-semibold transition">
+            Add to Order
+          </button>
+          <!-- PRODUCT_ACTIONS -->
+        </div>
+      </div>
+
+      <!-- Product Card 2 -->
+      <div class="product-card bg-slate-800/60 border border-slate-700/80 rounded-xl p-5 flex flex-col justify-between hover:border-slate-600 transition" data-product-id="prod-2">
+        <div>
+          <div class="h-40 rounded-lg bg-slate-700/40 flex items-center justify-center text-slate-500 font-semibold mb-4 border border-slate-700/40">
+            Neural Accelerators
+          </div>
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-xs font-semibold px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">In Stock</span>
+            <span class="text-sm font-bold text-indigo-400">$1,299</span>
+          </div>
+          <h2 class="text-base font-semibold text-white">TensorPod Desktop</h2>
+          <p class="text-xs text-slate-400 mt-1">Dedicated tensor core matrix unit for local model fine-tuning.</p>
+        </div>
+        <div class="mt-5 pt-4 border-t border-slate-700/60 flex items-center justify-between gap-3">
+          <button class="flex-1 py-2 rounded-lg bg-indigo-600/90 hover:bg-indigo-600 text-white text-xs font-semibold transition">
+            Add to Order
+          </button>
+          <!-- PRODUCT_ACTIONS -->
+        </div>
+      </div>
+
+      <!-- Product Card 3 -->
+      <div class="product-card bg-slate-800/60 border border-slate-700/80 rounded-xl p-5 flex flex-col justify-between hover:border-slate-600 transition" data-product-id="prod-3">
+        <div>
+          <div class="h-40 rounded-lg bg-slate-700/40 flex items-center justify-center text-slate-500 font-semibold mb-4 border border-slate-700/40">
+            Optic Switch 100G
+          </div>
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-xs font-semibold px-2 py-0.5 rounded bg-amber-500/10 text-amber-400 border border-amber-500/20">Low Stock</span>
+            <span class="text-sm font-bold text-indigo-400">$2,450</span>
+          </div>
+          <h2 class="text-base font-semibold text-white">QuantumRack Switch</h2>
+          <p class="text-xs text-slate-400 mt-1">Ultra low-latency optical interconnect switch with telemetry.</p>
+        </div>
+        <div class="mt-5 pt-4 border-t border-slate-700/60 flex items-center justify-between gap-3">
+          <button class="flex-1 py-2 rounded-lg bg-indigo-600/90 hover:bg-indigo-600 text-white text-xs font-semibold transition">
+            Add to Order
+          </button>
+          <!-- PRODUCT_ACTIONS -->
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
